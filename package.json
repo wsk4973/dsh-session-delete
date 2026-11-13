@@ -1,0 +1,50 @@
+{
+  "name": "dsh-session-delete",
+  "version": "1.0.0",
+  "description": "Delete conversations from DeepSeek Harness: a session-row menu action that removes the session from the list and wipes its log, registry entry and projection cache.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "session",
+    "delete"
+  ],
+  "license": "MIT",
+  "author": "wsk4973",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsk4973/dsh-session-delete.git"
+  },
+  "homepage": "https://github.com/wsk4973/dsh-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/wsk4973/dsh-session-delete/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js",
+    "test": "node test/smoke.mjs && node test/http.mjs && node test/client.mjs"
+  }
+}

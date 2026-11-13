@@ -1,0 +1,18 @@
+# dsh-session-delete — bundle patch layer.
+#
+# Installed into a profile (dsh plugin --profile <name> add dsh-session-delete,
+# or dropped into the profile's node_modules), the DSH loader inserts this entry
+# into that profile's root entry list, which mounts the plugin row.
+#
+# `inject` is required: it makes Cordis wait for webServer to exist before
+# activating the plugin. Without it, apply() can run before the route table
+# exists and the HTTP routes never register.
+- insert:
+    - id: dsh-session-delete
+      name: 'dsh-session-delete'
+      inject:
+        - webServer
+      config:
+        # false（默认）= 直接彻底删除，界面上只有一个「删除」按钮。
+        # 改成 true 才会先进 $DSH_HOME/session-trash，删错还能手动找回。
+        trash: false
