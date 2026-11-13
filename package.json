@@ -1,7 +1,7 @@
 {
   "name": "dsh-session-delete",
   "version": "1.0.0",
-  "description": "Delete conversations from DeepSeek Harness: a session-row menu action that removes the session from the list and wipes its log, registry entry and projection cache.",
+  "description": "DSH 会话删除插件：在会话行「...」菜单里一键彻底删除对话，连同磁盘上的会话日志一起清掉。Delete conversations from DeepSeek Harness — removes the row and wipes its log, registry entry and projection cache.",
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",

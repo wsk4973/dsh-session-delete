@@ -1,4 +1,9 @@
-# dsh-session-delete
+# DSH 会话删除插件（dsh-session-delete）
+
+**一键彻底删除 DeepSeek Harness 里的对话**：删掉侧栏那一行，连磁盘上的会话日志一起清掉。
+
+> 关键词：DSH 会话删除 · 删除对话 · 删除聊天记录 · 清理会话 · 会话管理 · DeepSeek Harness 插件 ·
+> delete conversation · delete session · session cleanup
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai) 补上「**真正删除会话**」的能力。
 
